@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codeforces Stats</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body >
+  <div class="container">
+    <div class="container-heading">
+        <h1>Codeforces Stats</h1>
+    </div>
+    
+    <div class="container-input">
+        <input type="text" id="handleInput" placeholder="Enter Codeforces Handle">
+        <button onclick="fetchStats()">Get Stats</button>
+    </div>
+
+    <div class="main-content">
+      <div class="info-chart">
+        <div id="userInfo"></div>
+        <div class="canvas-container">
+          <canvas id="ratingChart" width="400" height="200"></canvas>
+        </div>
+      </div>
+
+      <div class="problem-list">
+        <button id="toggleProblemBtn" onclick="fetchProblems()">Show Problem List</button>
+        <select id="problemDropdown" class="hidden" size="10"></select>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
